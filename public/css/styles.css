@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
+
+.titulo { padding:26px 10px 22px;  }
+
+.titulo h1 {
+	font-size: 24px;
+	letter-spacing: 4px;
+}
+
+.navbar-brand img {max-width: 200px; padding: 10px}
+
+.navbar-expand-lg {min-height: 110px;}
+
+.bg-dark {background-color: black !important;}
+
+.nav-link {
+	letter-spacing: 5px;
+	margin: 0 15px;
+	border: 1px solid transparent;
+	padding: 10px 15px 10px 20px !important;
+	color: white;
+}
+
+.nav-link:hover, .nav-link:focus  {
+	border: 1px solid;
+	color: white;
+}
+
+.navbar-toggler {
+  border: transparent !important;
+ }
+
+.navbar-toggler:focus {
+  box-shadow: transparent !important;
+}
+
+#salones {margin-top: 115px;}
+
+#servicios {
+	padding: 50px 10px;
+	background-color: #000;
+	/*color: #a7a7a7;*/
+	color: white;
+}
+
+#servicios h1 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+#servicios p {
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 1.7;
+}
+
+#contacto {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 500px;
+    color: white;
+    padding: 20px 0 70px 0;
+    text-align: center;
+}
+
+.left-contacto {
+	border-right: 1px solid;
+	padding: 0 50px;
+}
+
+.form-control {
+	background-color: transparent;	
+	color: white;
+	border-radius: 0;
+}
+
+.form-control::placeholder {
+ 	color: white;
+   	opacity: 1;
+}
+
+.form-control:focus {
+  border-color: white !important;
+  outline: 0;
+}
+
+.btn-primary {
+	border: 1px solid;
+	border-radius: 0;
+	background-color: transparent;
+	padding: 10px 30px;
+	letter-spacing: 3px;
+}
+
+.btn-primary {
+	border: 1px solid;
+	border-radius: 0;
+	background-color: transparent;
+	padding: 10px 30px;
+	letter-spacing: 3px;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: transparent !important;
+	border-color: #ccc !important;
+	color: #ccc;
+}
+
+.logo-footer {
+	width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 55px;
+}
+
+a {color: white; text-decoration: none;}
+
+.error {
+	text-align: left;
+	width: 100%;	
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mensaje-consulta {	letter-spacing: 4.5px; }
+.offcanvas-header, .offcanvas-body { background-color: black; }
+.mensaje-consulta {margin-bottom: 40px;}
+.no-desk {display: none;}
+
+@media only screen and (max-width: 600px) {
+ 	
+ 	.no-desk {display: inline !important;}
+
+}
