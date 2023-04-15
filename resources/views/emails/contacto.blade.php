@@ -169,14 +169,14 @@
                        
                     <span>Av. Belgrano 312 - Entrepiso - CABA</span><br> 
                     <span>(+54911) 6875-9015</span><br>
-                    <a href="mailto:info@eventossantelmo.com" style="color: #3f3f3f;">info@eventossantelmo.com</a><br>
-                    <a href="https://eventossantelmo.com" style="color: #3f3f3f;">eventossantelmo.com</a><br>
+                    <a href="mailto:info@eventosbsas.com" style="color: #3f3f3f;">info@eventosbsas.com</a><br>
+                    <a href="https://eventosbsas.com" style="color: #3f3f3f;">eventosbsas.com</a><br>
 
                     </td>
 
                     <td width="300" align="right" class="" style="font-size:12px;"> 
 
-                      <a href="https://www.eventossantelmo.com">
+                      <a href="https://www.eventosbsas.com">
                          <img src="https://www.eventossantelmo.com/images/logo-eventos-san-telmo.png" width="120" style="float:right;margin:0; padding:0; border:none; display:block;" border="0" alt="" /> 
                       </a>
 

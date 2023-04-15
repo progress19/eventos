@@ -168,10 +168,10 @@
             <!-- right -->
 
             <div class="col-md-6">
-                <img class="img-fluid logo-footer" style="display: block;" src="{{ asset('images/EventosSanTelmo-footer.svg') }}" alt=""> 
+                <img class="img-fluid logo-footer" style="display: block;" src="{{ asset('images/eventos-bsas-footer.svg') }}" alt=""> 
                 <p>Av. Belgrano 312 - Entrepiso - CABA</p>
                 <p><i class="fa-brands fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=5491168759015">(+54911) 6875-9015</a></p> 
-                <p><a href="mailto:info@eventossantelmo.com">info@eventossantelmo.com</a></p>
+                <p><a href="mailto:info@eventosbsas.com">info@eventosbsas.com</a></p>
             </div>
 
         </div>

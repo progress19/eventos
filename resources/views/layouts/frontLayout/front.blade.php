@@ -26,7 +26,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Offcanvas navbar large">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{ asset('/images/EventosSanTelmo.svg') }}" class="img-fluid">
+        <img src="{{ asset('/images/eventos-bsas.svg') }}" class="img-fluid">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
         <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
-            <img src="{{ asset('/images/EventosSanTelmo.svg') }}" style="width:150px" class="img-fluid">
+            <img src="{{ asset('/images/eventos-bsas.svg') }}" style="width:150px" class="img-fluid">
           </h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>

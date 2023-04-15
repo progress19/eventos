@@ -54,7 +54,7 @@ class Controller extends BaseController
        
        {
             //remitente
-            $message->from('info@eventossantelmo.com', 'Eventos San Telmo');
+            $message->from('info@eventosbsas.com', 'Eventos San Telmo');
 
             //asunto
             $message->subject('Contacto desde Eventos San Telmo');
