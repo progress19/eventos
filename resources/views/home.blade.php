@@ -7,7 +7,7 @@
     <div class="container">
     
         <div class="col-md-12 text-center titulo">
-            <h1>CONTAMOS CON 12 SALONES PREMIUM PARA EVENTOS CORPORATIVOS</h1>
+            <h1>CONTAMOS CON 12 SALONES PREMIUM PARA EVENTOS CORPORATIVOS Y SOCIALES</h1>
         </div>
 
     </div>
@@ -45,9 +45,11 @@
   <div class="container">
 
       <h1>SERVICIOS PERSONALIZADOS</h1>  
-      <p>Alquiler de salones premium para eventos privados, cocktails, coffee brake, reuniones, exposiciones, seminarios, filmaciones, book de fotos, presentaciones en teatro, bar propio y todo para que su evento sea un momento único. Cada salón cuenta con la más avanzada tecnología en sonido, video, sistemas de iluminación, pantalla gigante, acceso y baños para personas con movilidad reducida, WiFi, AACC, sistemas de filtro anti-covid, seguridad privada, cocina propia y parrilla al carbón.</p>  
+      <p>Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado.  Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
 
-      <p class="text-start">Consultenos por nuestros servicios adicionales a su medida:</p>
+      <p>Nuestro staff permanente de profesionales lo asesorarán y brindaran todo su conocimiento para hacer de su evento un gran éxito.</p>
+
+      <p class="text-start">Consúltenos por nuestros servicios adicionales a su medida:</p>
 
       <div class="row">
 

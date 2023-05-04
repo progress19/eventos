@@ -1,7 +1,4 @@
 <?php
-
-
-
 return [
     'driver' => env('MAIL_DRIVER', 'smtp'),
     'host' => env('MAIL_HOST', 'mail.pixtudios.net'),
@@ -20,5 +17,4 @@ return [
             'verify_peer_name' => false,
         ],
     ],
-
 ];

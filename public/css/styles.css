@@ -59,8 +59,8 @@ body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
 }
 
 #contacto {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
     min-height: 500px;
     color: white;
     padding: 20px 0 70px 0;
