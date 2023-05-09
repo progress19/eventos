@@ -8,14 +8,12 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-class Controller extends BaseController
-{
+class Controller extends BaseController {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-   public function index() {
+   
+    public function index() {
         
         $salones = array(
-        
             '693675655', //0
             '689651119', //1
             '689650649', //2
@@ -28,13 +26,10 @@ class Controller extends BaseController
             '707001090', //9
             '707004519', //10
             '707005567', //11
-
         );
-
         return view('home')->with([
             'salones' => $salones,
         ]);
-
     }
 
     public function enviarContacto(Request $request) {
@@ -50,17 +45,13 @@ class Controller extends BaseController
           ];
         */
        //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
-       \Mail::send('emails.contacto', $data, function($message) use ($request)
-       
-       {
+       \Mail::send('emails.contacto', $data, function($message) use ($request) {
             //remitente
             $message->from('info@eventosbsas.com', 'Eventos San Telmo');
 
             //asunto
             $message->subject('Contacto desde Eventos San Telmo');
-
             $message->to('luciano@laventanaweb.com', 'Eventos San Telmo');  
-       
             $message->to($request->email, $request->nombre);
       
        });

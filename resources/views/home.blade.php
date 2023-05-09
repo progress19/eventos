@@ -1,3 +1,5 @@
+<? use App\Fun; ?>
+
 @extends('layouts.frontLayout.front')
 @section('title', 'Home')    
 @section('content')
@@ -19,14 +21,14 @@
         <? $i = 0; $delay = 100; ?>
 
         @foreach ($salones as $salon)
-
+            
             <div class="aos-item" data-aos="fade" data-aos-delay="<?php echo $delay; ?>">
               <div class="aos-item__inner pswp__item">
-
-                <a href="https://player.vimeo.com/video/{{ $salon }}?autoplay=1&loop=1&autopause=0" class="overlay" data-rel="lightcase:myCollection:slideshow{{$i}}">
-                  <img class="img-fluid" style="display: block;" src="{{ asset('images/salones/'.$i.'.jpg') }}" alt="">
+                <a href="https://player.vimeo.com/video/{{ $salon }}?autoplay=1&loop=1&autopause=0" id="{{ $i }}" caption="{{ Fun::getBtnPresentacionSalon($i) }}" title="{{ Fun::getTitleSalon( $i ) }}" class="" data-rel="lightcase:myCollection:slideshow{{$i}}">
+                  <img class="img-fluid overlay" style="display: block;" src="{{ asset('images/salones/'.$i.'.jpg') }}" alt="">
+                  <div class="{{ $i }} nombre-salon">{{ Fun::getTitleSalon( $i ) }}</div>
                 </a>
-          
+                
               </div>
             </div>
 
@@ -45,10 +47,8 @@
   <div class="container">
 
       <h1>SERVICIOS PERSONALIZADOS</h1>  
-      <p>Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado.  Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
-
+      <p>Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado. Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
       <p>Nuestro staff permanente de profesionales lo asesorarán y brindaran todo su conocimiento para hacer de su evento un gran éxito.</p>
-
       <p class="text-start">Consúltenos por nuestros servicios adicionales a su medida:</p>
 
       <div class="row">
@@ -101,11 +101,9 @@
 
             <div class="aos-item-2" data-aos="fade" data-aos-delay="<?php echo $delay; ?>">
               <div class="aos-item__inner pswp__item">
-
                 <a href="{{ asset('images/galeria/'.$i.'.jpg') }}" class="overlay" data-rel="lightcase-2:myCollection:slideshowa">
                   <img class="img-fluid" style="display: block;" src="{{ asset('images/galeria/'.$i.'.jpg') }}" alt="">
                 </a>
-          
               </div>
             </div>
 
@@ -114,7 +112,6 @@
         @endfor
          
     </div>
-
     
 </section>
 

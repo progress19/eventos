@@ -154,6 +154,7 @@
 						_self.objects.pause = $('<a href="#" class="' + _self.settings.classPrefix + 'icon-pause"><span>' + _self.settings.labels['navigator.pause'] + '</span></a>').hide()
 					);
 					_self.objects.case.append(
+						_self.objects.title = $('<h4 id="' + _self.settings.idPrefix + 'title"></h4>'),
 						_self.objects.content = $('<div id="' + _self.settings.idPrefix + 'content"></div>'),
 						_self.objects.info = $('<div id="' + _self.settings.idPrefix + 'info"></div>')
 					);
@@ -162,8 +163,7 @@
 					);
 					_self.objects.info.append(
 						_self.objects.sequenceInfo = $('<div id="' + _self.settings.idPrefix + 'sequenceInfo"></div>'),
-						_self.objects.title = $('<h4 id="' + _self.settings.idPrefix + 'title"></h4>'),
-						_self.objects.caption = $('<p id="' + _self.settings.idPrefix + 'caption"></p>')
+						_self.objects.caption = $('<div id="' + _self.settings.idPrefix + 'caption"></div>')
 					);
 				},
 				onInit: {},
@@ -224,7 +224,8 @@
 				objectData = {
 				this: $(object),
 				title: _self.settings.title || $object.attr(_self._prefixAttributeName('title')) || $object.attr('title'),
-				caption: _self.settings.caption || $object.attr(_self._prefixAttributeName('caption')) || $object.children('img').attr('alt'),
+				caption: _self.settings.caption || $object.attr(_self._prefixAttributeName('caption')) || $object.attr('caption'),
+				//caption: _self.settings.caption || $object.attr(_self._prefixAttributeName('caption')) || $object.children('img').attr('alt'),
 				url: _self._determineUrl(),
 				requestType: _self.settings.ajax.type,
 				requestData: _self.settings.ajax.data,
