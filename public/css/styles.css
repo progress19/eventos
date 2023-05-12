@@ -18,9 +18,9 @@ body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
 
 .nav-link {
 	letter-spacing: 5px;
-	margin: 0 15px;
+	margin: 0 4px;
 	border: 1px solid transparent;
-	padding: 10px 15px 10px 20px !important;
+	padding: 10px 12px 10px 12px !important;
 	color: white;
 }
 
@@ -58,12 +58,24 @@ body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
 	line-height: 1.7;
 }
 
+/*
 #contacto {
     background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
     min-height: 500px;
     color: white;
     padding: 20px 0 70px 0;
+    text-align: center;
+}
+*/
+
+#contacto {
+	color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    color: white;
+    padding: 20px 0 23px 0;
     text-align: center;
 }
 
@@ -165,8 +177,32 @@ a {color: white; text-decoration: none;}
 .mensaje-consulta {margin-bottom: 40px;}
 .no-desk {display: none;}
  
+.back-cocktails {
+	background-image: url('../images/WebEventos-Tragos.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 620px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.back-catering {
+	background-image: url('../images/WebEventos-Catering.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 620px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
     
 @media only screen and (max-width: 600px) {
  	.no-desk {display: inline !important;}
+
+	.back-cocktails { min-height: 190px; }
+	.back-catering { min-height: 190px; }
+
 }

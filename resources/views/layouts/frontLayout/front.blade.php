@@ -47,6 +47,12 @@
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#servicios">SERVICIOS</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#cocktails">COCKTAILS & TRAGOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#catering">CATERING</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#galeria">GALERIA</a>
             </li>
             <li class="nav-item">
