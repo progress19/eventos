@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
+body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px; background-color: black;}
 
 .titulo { padding:26px 10px 22px;  }
 
@@ -37,7 +37,10 @@ body {font-family: 'Montserrat', sans-serif; letter-spacing: 1px;}
   box-shadow: transparent !important;
 }
 
-#salones {margin-top: 115px;}
+#salones {
+	margin-top: 110px;
+	background-color: #000;
+}
 
 #servicios {
 	padding: 50px 10px;
@@ -177,15 +180,18 @@ a {color: white; text-decoration: none;}
 .mensaje-consulta {margin-bottom: 40px;}
 .no-desk {display: none;}
  
+
 .back-cocktails {
 	background-image: url('../images/WebEventos-Tragos.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-height: 620px;
+	min-height: 438px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: black;
+	overflow: hidden;
 }
 
 .back-catering {
@@ -193,11 +199,16 @@ a {color: white; text-decoration: none;}
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-height: 620px;
+	min-height: 438px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: background-size 0.5s ease-in-out; /* Agregue una transición suave */
+	background-color: black;
+	overflow: hidden;
 }
+
+#galeria { background-color: white; }
     
 @media only screen and (max-width: 600px) {
  	.no-desk {display: inline !important;}

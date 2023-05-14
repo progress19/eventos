@@ -5,7 +5,7 @@
 @section('content')
 
 <section id="salones">
-    <div class="container">
+    <div class="container-fluid" style="background-color: white;">
         <div class="col-md-12 text-center titulo">
             <h1>CONTAMOS CON 12 SALONES PREMIUM PARA EVENTOS CORPORATIVOS Y SOCIALES</h1>
         </div>
@@ -34,14 +34,14 @@
 
 <section id="servicios">
   <div class="container">
-      <h1>SERVICIOS PERSONALIZADOS</h1>  
-      <p>Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado. Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
-      <p>Nuestro staff permanente de profesionales lo asesorarán y brindaran todo su conocimiento para hacer de su evento un gran éxito.</p>
+      <h1 data-aos="fade">SERVICIOS PERSONALIZADOS</h1>  
+      <p data-aos="fade">Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado. Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
+      <p data-aos="fade">Nuestro staff permanente de profesionales lo asesorarán y brindaran todo su conocimiento para hacer de su evento un gran éxito.</p>
   </div>
 </section>
 
-<section id="cocktails" class="back-cocktails">
-    <div class="col-auto text-center">
+<section id="cocktails" data-aos="fade" class="back-cocktails">
+    <div class="col-auto text-center" data-aos="zoom-in">
         <a href="{{ asset('images/cocktails/1.jpg') }}" class="overlay" data-rel="lightcase-cocktails:myCollection:slideshowa">
            <button type="submit" class="btn btn-primary mb-3">COCKTAILS & TRAGOS</button>
         </a>
@@ -51,8 +51,8 @@
     </div>
 </section>
 
-<section id="catering" class="back-catering">
-    <div class="col-auto text-center">
+<section id="catering" data-aos="fade" class="back-catering">
+    <div class="col-auto text-center" data-aos="zoom-in">
         <a href="{{ asset('images/catering/1.jpg') }}" class="overlay" data-rel="lightcase-catering:myCollection:slideshowb">
             <button type="submit" class="btn btn-primary mb-3">CATERING PROPIO</button>
         </a>
@@ -132,10 +132,11 @@
 
 <script type="text/javascript">
 
+
     AOS.init({
       easing: 'ease-in-cubic',
       once: true,
-      delay: 2600,
+      delay: 1000,
     });
   
     jQuery(document).ready(function($) {
@@ -146,30 +147,7 @@
         speedIn: 400,
         showSequenceInfo: false,
       });
- 
-/*
-      $('a[data-rel^=lightcase-cocktails]').lightcase({
-        swipe: true,
-        transition: 'scrollHorizontal',
-        speedIn: 400,
-        showSequenceInfo: false,
-      });
 
-      $('a[data-rel^=lightcase-catering]').lightcase({
-        swipe: true,
-        transition: 'scrollHorizontal',
-        speedIn: 400,
-        showSequenceInfo: false,
-      });
-*/
-/*
-      $('a[data-rel^=lightcase-galeria]').lightcase({
-        swipe: true,
-        transition: 'scrollHorizontal',
-        speedIn: 400,
-        showSequenceInfo: false,
-      });
-*/
     });
 
   </script>

@@ -48,7 +48,7 @@ class Fun extends Model {
 
         $url = asset('pdfs/' . $file . '.pdf');
 
-        return '<a target="new" class="btn-presentacion" href="'.$url.'">DESCARGAR PRESENTACIÓN</a>';
+        return '<a target="new" class="btn-presentacion" href="'.$url.'">MIRÁ TODOS NUESTROS SERVICIOS</a>';
 
     }
 

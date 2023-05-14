@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="{{ asset('css/galeria.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/aos.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">  
 
   <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/brands.min.css') }}" rel="stylesheet">
