@@ -1,0 +1,166 @@
+.jcarousel-wrapper {
+    margin: 0 auto;
+    position: relative;
+    /*width: 95%;*/
+}
+
+/** Carousel **/
+
+.jcarousel, .jcarousel_ofertas, .jcarouselPaquetesHome, .jcarouselOfertasHome, .jcarouselClientes {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel ul, .jcarousel_ofertas ul, .jcarouselPaquetesHome ul, .jcarouselOfertasHome ul, .jcarouselClientes ul {
+    width: 11000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li, .jcarouselPaquetesHome li, .jcarouselOfertasHome li, .jcarouselClientes li {
+    width: 100px;
+    float: left;
+    border: 0 solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jcarousel img, .jcarousel_ofertas img, .jcarouselPaquetesHome img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev, .jcarousel-control-prev-ofertas, .jcarousel-control-prev-destinos, .jcarousel-control-prev-paquetes,  
+.jcarousel-control-next, .jcarousel-control-next-ofertas, .jcarousel-control-next-destinos, .jcarousel-control-next-paquetes,
+.jcarousel-control-prev-navieras, .jcarousel-control-next-navieras {
+    position: absolute;
+    top: 31%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #a7aaac;
+    text-decoration: none;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    font-size: 35px;
+}
+
+.jcarousel-control-prev, .jcarousel-control-prev-ofertas, .jcarousel-control-prev-destinos, .jcarousel-control-prev-paquetes,
+.jcarousel-control-prev-navieras  {
+    left: -23px;
+}
+
+.jcarousel-control-prev:hover, .jcarousel-control-next:hover {
+    color: #777 !important;
+    text-decoration: none;
+}
+
+.jcarousel-control-next, .jcarousel-control-next-ofertas, .jcarousel-control-next-paquetes  {
+    right: -30px;
+}
+
+#second .jcarousel-control-prev,
+#second .jcarousel-control-next {
+    margin-top: -20px;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination, .jcarousel-pagination-ofertas, .jcarousel-pagination-destinos, .jcarousel-pagination-paquetes {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.jcarousel-pagination a, .jcarousel-pagination-ofertas a, .jcarousel-pagination-destinos a, .jcarousel-pagination-paquetes a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    height: 14px;
+    width: 14px;
+    line-height: 10px;
+    background: #ececec;
+    color: #4E443C;
+    border-radius: 17px;
+    text-indent: -9999px;
+    margin-right: 10px;
+    border: 1px solid #002a53;
+}
+
+.jcarousel-pagination a.active,
+.jcarousel-pagination-ofertas a.active,
+.jcarousel-pagination-destinos a.active,
+.jcarousel-pagination-paquetes a.active {
+    background: #81ff9e;
+    color: #fff;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
+.jcarousel-pagination-destinos a.active {
+    background: #002a53;
+    color: #fff;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
+.jcarousel-pagination-paquetes a.active, .jcarousel-pagination-ofertas a.active {
+    background: #002a53;
+    color: #fff;
+    opacity: 1;
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
+.jcarousel-pagination-paquetes, .jcarousel-pagination-ofertas {margin-top: 5px;}  
+
+.jcarousel-control-prev-paquetes, .jcarousel-control-prev-ofertas, .jcarousel-control-prev-ofertas, .jcarousel-control-prev-navieras { 
+    border: 1px #a7aaac solid;
+    padding: 0px;
+    padding-top: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    padding-top: 2px;
+}
+
+.jcarousel-control-next-paquetes, .jcarousel-control-next-ofertas, .jcarousel-control-next-navieras { 
+    border: 1px #a7aaac solid;
+    padding: 0px;
+    padding-top: 0px;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    padding-top: 2px;
+    padding-left: 3px;
+}
+
+.jcarousel-control-next-paquetes, .jcarousel-control-next-ofertas, .jcarousel-control-next-navieras {right: -23px;}
+
+.jcarousel-control-prev-paquetes:hover, .jcarousel-control-next-paquetes:hover {color: #ccc;}
+.jcarousel-control-prev-ofertas:hover, .jcarousel-control-next-ofertas:hover {color: #ccc;}
+.jcarousel-control-prev-navieras:hover, .jcarousel-control-next-navieras:hover {color: #ccc;}
+
+.jcarouselClientes li {text-align: center;}
+
+
+.jcarousel-control-next-navieras {right: -27px; top: 20px;}
+.jcarousel-control-prev-navieras {left: -23px; top: 20px;}

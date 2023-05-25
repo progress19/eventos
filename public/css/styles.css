@@ -209,6 +209,8 @@ a {color: white; text-decoration: none;}
 }
 
 #galeria { background-color: white; }
+
+#clientes { padding: 20px;}
     
 @media only screen and (max-width: 600px) {
  	.no-desk {display: inline !important;}

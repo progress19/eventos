@@ -27,8 +27,14 @@ class Controller extends BaseController {
             '707004519', //10
             '707005567', //11
         );
+
+        $clientes = array(
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'
+        );
+
         return view('home')->with([
             'salones' => $salones,
+            'clientes' => $clientes,
         ]);
     }
 

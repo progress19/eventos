@@ -15,11 +15,11 @@
   <link rel="stylesheet" href="{{ asset('css/lightcase.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
   <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">  
+  <link rel="stylesheet" href="{{ asset('css/jcarousel.responsive.css') }}" rel="stylesheet">
 
   <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/brands.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/solid.min.css') }}" rel="stylesheet">
-
 </head>
 
 <body>
@@ -79,12 +79,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/1.0.5/jquery.mobile-events.js"></script>
 <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
 
+<script src="{{ asset('js/jquery.jcarousel.min.js') }}" ></script>
+<script src="{{ asset('js/jcarousel.responsive.js') }}" ></script>
+<script src="{{ asset('js/bootstrap-swipe-carousel.min.js') }}" ></script>
+<script src="{{ asset('js/jquery.jcarousel-swipe.min.js') }}" ></script>
+
 <script>
 
   $('a[href^="#"]').on('click', function(event) {
   var target = $(this.getAttribute('href'));
-  if (target.length) {
-    event.preventDefault();
+  if (target.length) { event.preventDefault();
       $('html, body').stop().animate({ scrollTop: target.offset().top - 100 }, 1000); }
     });
     

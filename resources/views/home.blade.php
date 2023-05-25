@@ -83,6 +83,34 @@
 
 <div class="clearfix"></div>
 
+<section id="clientes">
+
+    <div class="container">
+        <div class="row">
+            <div id="conte-navieras-home">
+                <div class="jcarousel-wrapper">
+                    <div class="jcarouselClientes">
+                        <ul>
+                            @foreach ( $clientes as $element )
+                            <li>
+                                <div class="col-md-12">
+                                        <a href="" class="conte-li-navieras-home">
+                                            <div class="animated-background mh-52">
+                                                <img class="img-fluid" loading="lazy" src="{{ asset('images/clientes/'.$element.'.jpg') }}">
+                                            </div>
+                                        </a>
+                                </div>
+                            </li> 
+                            @endforeach
+                        </ul>
+                    </div>	
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
 <section id="contacto" style="background:url(images/EventosSanTelmo.jpg);">
     <div class="container">
         <div class="col-md-12 text-center titulo">
@@ -130,88 +158,98 @@
 
 @section('page-js-script')
 
-<script type="text/javascript">
+    <script type="text/javascript">
+        AOS.init({
+        easing: 'ease-in-cubic',
+        once: true,
+        delay: 1000,
+        });
+        jQuery(document).ready(function($) {
+        $('a[data-rel^=lightcase]').lightcase({
+            swipe: true,
+            transition: 'scrollHorizontal',
+            speedIn: 400,
+            showSequenceInfo: false,
+        });
 
+        });
+    </script>
 
-    AOS.init({
-      easing: 'ease-in-cubic',
-      once: true,
-      delay: 1000,
-    });
-  
-    jQuery(document).ready(function($) {
+<script>
+ 
+    var jcarousel = $('.jcarouselClientes');
 
-      $('a[data-rel^=lightcase]').lightcase({
-        swipe: true,
-        transition: 'scrollHorizontal',
-        speedIn: 400,
-        showSequenceInfo: false,
-      });
+    jcarousel.on('jcarousel:reload jcarousel:create', function () {
+        var carousel = $(this),
+        width = carousel.innerWidth() + 0;
 
-    });
+        if (width > 1024) {
+        width = width / 6;
+        } else if (width >= 415) {
+        width = width / 6;
+        }
 
-  </script>
+        carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+    })
+    .jcarousel({ wrap: 'circular' })
+    .jcarouselAutoscroll({ interval: 2000, target: '+=1', autostart: true });
 
-  <script>
+    $('.jcarouselClientes').jcarouselSwipe(); // init jcarouselSwipe
       
-$(document).ready(function() {
+    $(document).ready(function() {
 
-    /* FORM CONTACTO */
+        /* FORM CONTACTO */
+        $("#mensaje").hide();
+            $("#frmContacto").validate({
+                event: "blur",
+                rules: {'nombre': "required",'email': "required email",'comentario': "required"},
+                messages: {
+                    'nombre': 'Por favor, complete el campo.',
+                    'email': 'Por favor, complete el campo.',
+                    'comentario': 'Por favor, complete el campo.' 
+                },
+                debug: true,errorElement: "label",
+                submitHandler: function(form){
+                    /*
+                        if (grecaptcha === undefined) {
+                            alert('Recaptcha not defined'); 
+                            return; 
+                        }
 
-    $("#mensaje").hide();
+                        var response = grecaptcha.getResponse();
 
-        $("#frmContacto").validate({
-            event: "blur",
-            rules: {'nombre': "required",'email': "required email",'comentario': "required"},
-            messages: {
-                'nombre': 'Por favor, complete el campo.',
-                'email': 'Por favor, complete el campo.',
-                'comentario': 'Por favor, complete el campo.' 
-            },
-            debug: true,errorElement: "label",
-            submitHandler: function(form){
+                        if (!response) {
 
-            /*
-                if (grecaptcha === undefined) {
-                    alert('Recaptcha not defined'); 
-                    return; 
+                                grecaptcha.reset();
+                                grecaptcha.execute();
+
+                            //alert('Coud not get recaptcha response'); 
+                            return; 
+                        } 
+                    */
+
+                    var baseUrl = document.getElementById('baseUrl').value;
+
+                    $("#frmContacto").hide();
+                    $("#responseContacto").show();
+                    $("#responseContacto").html("<div style='text-align:center'><div class='lds-ring'><div></div><div></div><div></div><div></div></div></div>");
+                    
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+                        }
+                    })
+                    $.ajax({
+
+                        url: baseUrl+"/enviarContacto",
+                        method: "post",
+                        data: $('#frmContacto').serialize(),
+                        success: function(msg){
+                            $('#responseContacto').html(msg);
+                        }
+                    });
                 }
-
-                var response = grecaptcha.getResponse();
-
-                if (!response) {
-
-                        grecaptcha.reset();
-                        grecaptcha.execute();
-
-                    //alert('Coud not get recaptcha response'); 
-                    return; 
-                } 
-            */
-
-                var baseUrl = document.getElementById('baseUrl').value;
-
-                $("#frmContacto").hide();
-                $("#responseContacto").show();
-                $("#responseContacto").html("<div style='text-align:center'><div class='lds-ring'><div></div><div></div><div></div><div></div></div></div>");
-                
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
-                    }
-                })
-                $.ajax({
-
-                    url: baseUrl+"/enviarContacto",
-                    method: "post",
-                    data: $('#frmContacto').serialize(),
-                    success: function(msg){
-                        $('#responseContacto').html(msg);
-                    }
-                });
-            }
-        });            
-
+            });            
         });
 
   </script>
