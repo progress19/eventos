@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="csrf_token" content="{{ csrf_token() }}" />
 
-  <title>Eventos San telmo</title>
+  <title>Eventos Buenos Aires - Alquiler de salones premium para eventos corporativos y sociales - Eventos - Alquiler de salones</title>
     
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
@@ -51,7 +51,7 @@
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#cocktails">COCKTAILS & TRAGOS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#catering">CATERING</a>
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#cocktails">CATERING</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#galeria">GALERIA</a>

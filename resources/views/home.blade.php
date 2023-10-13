@@ -4,6 +4,10 @@
 @section('title', 'Home')    
 @section('content')
 
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin-top: 110px;">
+    <iframe src="https://player.vimeo.com/video/855403449?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" muted="muted" allow="autoplay; fullscreen" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
 <section id="salones">
     <div class="container-fluid" style="background-color: white;">
         <div class="col-md-12 text-center titulo">
@@ -35,11 +39,70 @@
 <section id="servicios">
   <div class="container">
       <h1 data-aos="fade">SERVICIOS PERSONALIZADOS</h1>  
-      <p data-aos="fade">Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado. Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, cumpleaños, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
+      <p data-aos="fade">Somos una empresa líder en organización de eventos empresariales con más de 40 años de experiencia en el mercado. Con 12 salones premium, ofrecemos una amplia variedad de opciones para cocktails, coffee breaks, almuerzos, cenas, reuniones, cumpleaños, exposiciones, seminarios, filmaciones, outside events, book de fotos, eventos de fin de año, presentaciones en teatro y mucho más.</p>  
       <p data-aos="fade">Nuestro staff permanente de profesionales lo asesorarán y brindaran todo su conocimiento para hacer de su evento un gran éxito.</p>
   </div>
 </section>
 
+<section id="cocktails">
+    
+    <div class="container-fluid">
+    
+    <div class="row no-pad">
+    
+        <div class="col-md-4" data-aos="fade">
+            
+            <div class="back-comun">
+                <img class="img-fluid" style="display: block;" src="{{ asset('images/cocktails.jpg') }}" alt="">
+            
+                <a href="{{ asset('images/cocktails/1.jpg') }}" class="overlay" caption="{{ Fun::getFooterServicio(1) }}" data-aos="zoom-in" style="position: absolute" data-rel="lightcase-cocktails:myCollection:slideshowa" title="COCKTAILS & TRAGOS" >
+                    <button type="submit" class="btn btn-primary mb-3">COCKTAILS & TRAGOS</button>
+                 </a>
+                 @for ($i = 2; $i < 24; $i++)
+                     <a href="{{ asset('images/cocktails/'.$i.'.jpg') }}" class="overlay" title="COCKTAILS & TRAGOS" data-rel="lightcase-cocktails:myCollection:slideshowa" caption="{{ Fun::getFooterServicio(1) }}"></a>
+                 @endfor
+                        
+            </div>
+
+        </div>
+
+        <div class="col-md-4" data-aos="fade">
+            <div class="back-comun">
+                
+                <img class="img-fluid" style="display: block;" src="{{ asset('images/catering.jpg') }}" alt="">
+
+                <a href="{{ asset('images/catering/1.jpg') }}" caption="{{ Fun::getFooterServicio(2) }}" data-aos="zoom-in" style="position: absolute" data-rel="lightcase-catering:myCollection:slideshowb" title="CATERING">
+                    <button type="submit" class="btn btn-primary mb-3">CATERING PROPIO</button>
+                </a>
+                @for ($i = 2; $i < 18; $i++)
+                    <a href="{{ asset('images/catering/'.$i.'.jpg') }}" title="CATERING" data-rel="lightcase-catering:myCollection:slideshowb" caption="{{ Fun::getFooterServicio(2) }}" ></a>
+                @endfor
+
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade">
+            <div class="back-comun">
+                
+                <img class="img-fluid" style="display: block;" src="{{ asset('images/exterior.jpg') }}" alt="">
+                
+                <a href="https://player.vimeo.com/video/869517793?autoplay=1&loop=1&autopause=0" data-aos="zoom-in" caption="Eventos en el exterior para más de 150 invitados" title="EVENTOS EN EXTERIOR" data-rel="lightcase:myCollection:slideshow{{$i}}" style="position: absolute">
+                    <button type="submit" class="btn btn-primary mb-3">EVENTOS EN EXTERIOR</button>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+<div class="clearfix"></div>
+
+
+{{-- 
 <section id="cocktails" data-aos="fade" class="back-cocktails">
     <div class="col-auto text-center" data-aos="zoom-in">
         <a href="{{ asset('images/cocktails/1.jpg') }}" class="overlay" data-rel="lightcase-cocktails:myCollection:slideshowa">
@@ -61,6 +124,8 @@
         @endfor
     </div>
 </section>
+--}}
+
     
 <section id="galeria">
     <div class="container">
@@ -68,17 +133,24 @@
             <h1>SEA UN INVITADO MÁS. NOSOTROS NOS OCUPAMOS DE TODO</h1>
         </div>
     </div>
+
     <div id="transcroller-body" class="aos-all">
-        <? $delay = 100; ?>
-        @for ($i = 1; $i < 17; $i++)
-            <div class="aos-item-2" data-aos="fade" data-aos-delay="<?php echo $delay; ?>">
-                <a href="{{ asset('images/galeria/'.$i.'.jpg') }}" class="overlay" data-rel="lightcase:myCollection:slideshowc">
-                  <img class="img-fluid" style="display: block;" src="{{ asset('images/galeria/'.$i.'.jpg') }}" alt="">
+        <?php
+            $images = range(1, 16); // Crea un array con los números del 1 al 16
+            shuffle($images); // Mezcla el orden de los números de forma aleatoria
+            $delay = 100;
+        ?>
+    
+        @foreach ($images as $image)
+            <div class="aos-item-2" data-aos="fade" data-aos-delay="{{ $delay }}">
+                <a href="{{ asset('images/galeria/'.$image.'.jpg') }}" class="overlay" data-rel="lightcase:myCollection:slideshowc">
+                    <img class="img-fluid" style="display: block;" src="{{ asset('images/galeria/'.$image.'.jpg') }}" alt="">
                 </a>
             </div>
-            <?php $delay = $delay + 100; ?> 
-        @endfor
+            <?php $delay += 100; ?>
+        @endforeach
     </div>
+
 </section>
 
 <div class="clearfix"></div>
@@ -210,6 +282,7 @@
                 },
                 debug: true,errorElement: "label",
                 submitHandler: function(form){
+
                     /*
                         if (grecaptcha === undefined) {
                             alert('Recaptcha not defined'); 
@@ -234,13 +307,8 @@
                     $("#responseContacto").show();
                     $("#responseContacto").html("<div style='text-align:center'><div class='lds-ring'><div></div><div></div><div></div><div></div></div></div>");
                     
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
-                        }
-                    })
+                    $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content') } })
                     $.ajax({
-
                         url: baseUrl+"/enviarContacto",
                         method: "post",
                         data: $('#frmContacto').serialize(),

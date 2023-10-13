@@ -52,4 +52,28 @@ class Fun extends Model {
 
     }
 
+    public static function getFooterServicio($id) {
+
+        $texto='';
+
+        switch ($id) {
+            
+            case '1': 
+            $texto = 'Barras móviles para eventos outsiders y barras fijas en todos nuestros salones. Cócteles de autos y clásicos.';
+            $texto_boton = 'VER CARTA';
+            break;
+            case '2': 
+            $texto = 'La exelente combinación de sabores y texturas en cada receta.';
+            $texto_boton = 'VER MENÚ';
+            break;
+            
+        }
+
+        $url = 'https://drive.google.com/drive/folders/1KyUQwmBQLHqZrh-B_X1nKpWODbTWKmki?usp=drive_link';
+
+        return $texto.'<br><br><a target="new" class="btn-presentacion" href="'.$url.'">'.$texto_boton.'</a>
+        ';
+
+    }
+
 }
