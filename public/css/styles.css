@@ -229,3 +229,8 @@ a {color: white; text-decoration: none;}
 	.back-cocktails { min-height: 190px; }
 	.back-catering { min-height: 190px; }
 }
+
+.dropdown-menu .dropdown-item:hover {
+	color: black !important;
+	background-color: white !important;
+}

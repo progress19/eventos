@@ -17,9 +17,15 @@
   <link rel="stylesheet" href="{{ asset('css/hover-min.css') }}">  
   <link rel="stylesheet" href="{{ asset('css/jcarousel.responsive.css') }}" rel="stylesheet">
 
-  <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">    
   <link href="{{ asset('css/brands.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/solid.min.css') }}" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon_io/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon_io/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon_io/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ asset('images/favicon_io/site.webmanifest') }}">
+
 </head>
 
 <body>
@@ -53,6 +59,20 @@
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#cocktails">CATERING</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MENU
+              </a>
+              <ul class="dropdown-menu dropdown-menu-start bg-dark" aria-labelledby="menuDropdown">
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1mPyXefQjIElVeezwgvdxaBarO35o-iT6/view?usp=drive_link" target="_blank">Workshop</a></li>
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1wGRGlgrqitL4S-QPQX3DDK-DLWcBBGqY/view?usp=drive_link" target="_blank">Rooftop</a></li>
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1dtO6CP-7Yw_ly9UVq-4JjO8SHRF7ASGG/view?usp=drive_link" target="_blank">Degustación & Maridaje</a></li>
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1TGPuuYGPDMShjfNVdLf04GSwo9zJoWcy/view?usp=drive_link" target="_blank">Cocktails</a></li>
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1LU6AtpQK3FWlMypjmM-2e0t1sfzhcc-N/view?usp=drive_link" target="_blank">Cocktails & Finger Food</a></li>
+                  <li><a class="dropdown-item text-white" href="https://drive.google.com/file/d/1-llGq5Z-yvUNopxPMS90HlPpDyMAaixB/view?usp=drive_link" target="_blank">Coffee Break</a></li>
+              </ul>
+          </li>
+          
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target=".navbar-offcanvas.show" href="#galeria">GALERIA</a>
             </li>
